@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nevigo.ai_navigo.dao.IF_preferenceDao">
+<!--    public String getPreferenceById(String memberId);-->
+
+    <!-- 사용자 id 중복 확인을 위한 구문 -->
+    <select id="getPreferenceById" parameterType="String" resultType="String">
+        select prefer_purpose from preference where member_id = #{memberId}
+    </select>
+
+    <!-- After: 명시적 컬럼 지정 -->
+    <insert id="setUserClickInfo" parameterType="com.nevigo.ai_navigo.dto.UserClickDTO">
+        INSERT INTO user_activity
+            (member_id, contentid, cat1, cat2, cat3, clicked_at)
+        VALUES
+            (#{member_id}, #{contentid}, #{cat1}, #{cat2}, #{cat3}, DEFAULT)
+    </insert>
+</mapper>

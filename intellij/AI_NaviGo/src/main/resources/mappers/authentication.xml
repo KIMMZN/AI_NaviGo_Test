@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nevigo.ai_navigo.dao.IF_SignUpDao">
+    <!-- 사용자 id 중복 확인을 위한 구문 -->
+    <select id="dupCheckId" parameterType="String" resultType="int">
+        select count(*) from member where member_id = #{memberId}
+    </select>
+    <!-- 회원가입(member 테이블에 insert) 하기 위한 구문 -->
+    <insert id="insMember" parameterType="com.nevigo.ai_navigo.dto.MemberDTO">
+        insert into member(member_id, member_name, member_pw, member_gender, member_grade, reg_date, upt_date)
+        values (#{memberId}, #{memberName}, #{memberPw}, #{memberGender}, default, default, default)
+    </insert>
+    <!-- 사용자의 여행 선호 취향 ins -->
+    <insert id="insPreference" parameterType="java.util.Map">
+        INSERT INTO Preference(member_id, reg_date, upt_date, prefer_purpose)
+        VALUES(#{memberId}, default, default, #{selectedCategory})
+    </insert>
+</mapper>

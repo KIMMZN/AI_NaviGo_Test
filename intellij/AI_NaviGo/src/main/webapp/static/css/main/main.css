@@ -1,0 +1,79 @@
+/* 색상 변수 예시 */
+:root {
+    --main-blue: #1e70c9;    /* 주 파랑색 */
+    --light-blue: #e8f1fa;   /* 배경용 연한 파랑색 */
+    --dark-blue: #0b4574;    /* 버튼/포인트용 진한 파랑색 */
+    --white:     #ffffff;    /* 흰색 */
+}
+/* Hero 섹션 */
+.hero {
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+}
+
+.hero h1 span {
+    color: var(--main-blue);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--main-blue);
+    color: var(--white);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #165d9e;
+}
+
+/* 샘플 일정 섹션 */
+.sample-itinerary {
+    max-width: 1200px;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.itinerary-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+}
+
+.itinerary-info p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.itinerary-map {
+    background-color: var(--light-blue);
+    border: 2px dashed var(--main-blue);
+    border-radius: 8px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-blue);
+    font-weight: bold;
+}

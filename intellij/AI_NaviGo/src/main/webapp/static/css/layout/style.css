@@ -1,0 +1,84 @@
+/************************************************
+  1) 색상 변수 (필요한 경우만 남기거나 수정)
+ ************************************************/
+:root {
+    --main-blue:  #1e70c9;
+    --light-blue: #e8f1fa;
+    --dark-blue:  #0b4574;
+    --white:      #ffffff;
+}
+/************************************************
+  2) Header 스타일
+ ************************************************/
+/* #top-header logo & nav  */
+/*#top-header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 1rem 2rem;*/
+/*    background-color: var(--light-blue);*/
+/*}*/
+
+/*.logo {*/
+/*    font-size: 1.5rem;*/
+/*    font-weight: bold;*/
+/*    color: var(--dark-blue);*/
+/*}*/
+
+/*!*************************************************/
+/*  3) Nav 스타일*/
+/* ************************************************!*/
+/*nav {*/
+/*    !* NAV 자체의 배경색, 여백 등 *!*/
+/*    !* (header 내에서 flex 분할할 경우, 여기서는 크게 안 줘도 됨) *!*/
+/*}*/
+
+/*nav ul {*/
+/*    list-style: none; !* 점 제거 *!*/
+/*    display: flex;*/
+/*    gap: 1.5rem;      !* 메뉴 사이 간격 *!*/
+/*    margin: 0;        !* 불필요한 기본 여백 제거 *!*/
+/*    padding: 0;*/
+/*}*/
+
+/*nav li {*/
+/*    !* 필요하다면 li 스타일링 가능 *!*/
+/*}*/
+
+/*nav li:hover {*/
+/*    background-color: var(--main-blue);*/
+/*    border-radius: 4px;*/
+/*}*/
+
+/*nav a {*/
+/*    text-decoration: none;*/
+/*    color: var(--dark-blue);*/
+/*    font-weight: 500;*/
+/*}*/
+
+/* 로그인/회원가입 등의 버튼 스타일 (예시) */
+.btn-signin {
+    padding: 0.5rem 1rem;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.btn-signin:hover {
+    background-color: #072f52;
+}
+
+/************************************************
+  4) Footer 스타일
+ ************************************************/
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--light-blue);
+    margin-top: 2rem; /* 본문과의 간격을 두고 싶다면 */
+}
+
+footer p {
+    color: var(--dark-blue);
+    margin: 0;
+}

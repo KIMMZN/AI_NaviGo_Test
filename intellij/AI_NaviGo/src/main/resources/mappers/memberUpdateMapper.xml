@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.nevigo.ai_navigo.dao.memberUpdateDao">
+
+    <!-- 회원 정보 조회 -->
+    <select id="findById" resultType="com.nevigo.ai_navigo.dto.MemberDTO">
+        SELECT member_id AS memberId,
+               member_name AS memberName,
+               member_pw AS memberPw,
+               member_gender AS memberGender,
+               member_grade AS memberGrade
+        FROM member
+        WHERE member_id = #{member_id}
+    </select>
+
+    <!-- 회원 정보 업데이트 -->
+    <update id="updateMember">
+        UPDATE member
+        SET member_name = #{memberName},
+            member_pw = #{memberPw},
+            member_gender = #{memberGender},
+            member_grade = #{memberGrade}
+        WHERE member_id = #{memberId}
+    </update>
+
+</mapper>
