@@ -8,5 +8,5 @@ import lombok.ToString;
 @Setter
 @ToString
 public class PreferenceDTO {
-    private String preference;
+    public String preference;
 }

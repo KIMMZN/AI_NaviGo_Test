@@ -17,4 +17,5 @@
         VALUES
             (#{member_id}, #{contentid}, #{cat1}, #{cat2}, #{cat3}, DEFAULT)
     </insert>
+
 </mapper>

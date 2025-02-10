@@ -99,12 +99,12 @@
     <!-- (1) 전체 탭: 여러 섹션을 순서대로 표시 -->
     <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
         <jsp:include page="/WEB-INF/views/recommended/ai.jsp">
-            <jsp:param name="limit" value="6" />
+            <jsp:param name="limit" value="8" />
         </jsp:include>
         <jsp:include page="/WEB-INF/views/recommended/popular.jsp" />
         <jsp:include page="/WEB-INF/views/recommended/season.jsp" />
         <jsp:include page="/WEB-INF/views/recommended/festival.jsp">
-            <jsp:param name="limit" value="6" />
+            <jsp:param name="limit" value="8" />
         </jsp:include>
     </div>
 
